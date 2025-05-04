@@ -50,15 +50,7 @@ onMounted(() => {
 </script>
 
 <style> 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  z-index: 10;
-}
+
 .glass-title {
   font-size: 4rem;
   font-weight: bold;
@@ -90,13 +82,18 @@ onMounted(() => {
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-
+/
 .glass-button:hover {
-  background: rgba(255, 255, 255, 0.2);  
-  transform: scale(1.05);  
+  background: rgba(255, 255, 255, 0.2);  /* Fondo más transparente */
+  transform: scale(1.05);  /* Escalado leve en hover */
 }
 
 
+.h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+top:0cap
+}
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s ease;
 }
@@ -104,40 +101,62 @@ onMounted(() => {
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
-#bg-video {
+.hover-group:hover .fade-on-hover {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-on-hover {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.hover-group {
   position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
+  bottom: 2rem; /* o el valor que necesites */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+
+#bg-video {
+  position: fixed;
+  bottom:1% ;
+  left: 110px;
+  width: 100%;
+  height: 120%;
+  object-fit:var();
   z-index: -1;
 }
 
-/* Contenido sobre el video */
-.video-content {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding-bottom: 5rem;
-}
-
-/* Botón elegante */
-.cta-button {
-  padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(6px);
-  border: none;
-  border-radius: 12px;
-  font-weight: bold;
-  font-size: 1rem;
+/* TOGGLE BAR */
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  font-size: 62px;
+  font-weight: bolder;
+  color: white;
   cursor: pointer;
-  transition: 0.3s ease;
+  z-index: 2;
+}
+.button {
+  background: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Borde similar al cristal */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 12px 24px;
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-
+.button:hover {
+  background: rgba(255, 255, 255, 0.4); /* Aumentar la opacidad en hover */
+  transform: scale(1.1); /* Aumentar el tamaño del botón al pasar el ratón */
+}
 @media (max-width: 768px) {
   .postal-card {
     flex-direction: column;

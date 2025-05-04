@@ -63,6 +63,7 @@
   background: rgba(255, 255, 255, 0.1); /* gris claro translúcido */
   backdrop-filter: blur(10px);
   border-radius: 1rem;
+  margin-top: 90px;
   padding: 2rem 3rem;
   text-align: center;
   color: white;

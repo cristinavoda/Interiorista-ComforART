@@ -7,8 +7,8 @@
         <img src="/proyecto1.jpg" alt="Proyecto 1" />
       </div>
       <div class="card-back">
-        <h3>Nombre del Proyecto</h3>
-        <p>Descripción breve y atractiva.</p>
+        <h3>Rincon para descanso</h3>
+        <p>El ambiente predominante en blanco induce la paz  ,el chaiselongue blanco con su forma ergonomica se amolda ala forma del cuerpo ,los cojines en conjunto con la alfombra  .</p>
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@
         <img src="/proyecto2.jpg" alt="Proyecto 2" />
       </div>
       <div class="card-back">
-        <h3>Nombre del Proyecto</h3>
+        <h3>Oficina</h3>
         <p>Descripción breve y atractiva.</p>
       </div>
     </div>

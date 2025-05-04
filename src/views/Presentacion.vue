@@ -6,7 +6,7 @@
   </div>
   <div class="texto-presentacion">
     <h1>Soy Cristina Voda</h1>
-    <p> Soy  interiorista y diseño interiores  modernas con alma, funcionalidad y estilo desde ComforART .</p>
+    <p ref="subtitle" class="text-lg md:text-4xl text-gray-600 max-w-xl text-center -m-t-10"> Soy  interiorista y diseño interiores  modernas con alma, funcionalidad y estilo desde ComforART </p>
     
     <div class="boton-container">
   <router-link to="/proyectos" class="ver-proyectos-btn">Ver Proyectos</router-link>

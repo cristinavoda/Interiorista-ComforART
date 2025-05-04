@@ -110,5 +110,16 @@
   justify-content: center;
   align-items: center;
   transform: rotateY(180deg);
+}@media (max-width: 768px) {
+  .postal-card {
+    flex-direction: column;
+    aspect-ratio: auto;
+    padding: 1rem;
+  }
+
+  .postal-left, .postal-right {
+    width: 100%;
+  }
 }
+
 </style>

@@ -151,11 +151,11 @@ top:0cap
 
 #bg-video {
   position: fixed;
-  top:15%;
-  bottom:15% ;
-  left: 0;
+  top:5%;
+  bottom:5% ;
+  left: 110px;
   width: 100%;
-  height: 70%;
+  height: 90%;
   object-fit:var();
   z-index: -1;
 }
@@ -188,5 +188,17 @@ top:0cap
   background: rgba(255, 255, 255, 0.4); /* Aumentar la opacidad en hover */
   transform: scale(1.1); /* Aumentar el tamaño del botón al pasar el ratón */
 }
+@media (max-width: 768px) {
+  .postal-card {
+    flex-direction: column;
+    aspect-ratio: auto;
+    padding: 1rem;
+  }
+
+  .postal-left, .postal-right {
+    width: 100%;
+  }
+}
+
 
 </style>

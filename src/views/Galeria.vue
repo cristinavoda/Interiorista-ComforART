@@ -77,6 +77,7 @@ export default {
 
 .galeria-botones {
   margin-top: 210px;
+  margin-left: -140px;
   width: 30%;
   padding: 2rem;
   display: flex;
@@ -110,6 +111,7 @@ export default {
 }
 
 .galeria-imagen {
+  margin-top: 60px;
   width: 160%;
   
   display: flex;
@@ -119,9 +121,21 @@ export default {
 }
 
 .galeria-imagen img {
-  max-width: 100%;
-  max-height: 80vh;
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
   object-fit: cover;
 }
+@media (max-width: 768px) {
+  .postal-card {
+    flex-direction: column;
+    aspect-ratio: auto;
+    padding: 1rem;
+  }
+
+  .postal-left, .postal-right {
+    width: 100%;
+  }
+}
+
 </style>

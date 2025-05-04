@@ -43,7 +43,7 @@
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(6, auto);
   gap: 1rem;
-  max-width: 1100px;
+  width: 3100px;
   margin: 1 auto;
   background-color: rgba(255, 255, 255, 0.062); /* efecto cristal o papel */
   padding: 2rem;
@@ -105,6 +105,17 @@
   transform: scale(1.03);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .postal-card {
+    flex-direction: column;
+    aspect-ratio: auto;
+    padding: 1rem;
+  }
+
+  .postal-left, .postal-right {
+    width: 100%;
+  }
 }
 
 </style>

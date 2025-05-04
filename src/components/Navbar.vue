@@ -32,8 +32,8 @@ const toggleMenu = () => {
   box-shadow: 6px 12px 6px rgba(102, 105, 105, 0.1);
   position:absolute;
   top: 0;
-  margin-right:  20px;
-  width:100%;
+  margin-right:  -80px;
+  width:90%;
   z-index: 50;
   padding: 20px 30px;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -45,7 +45,7 @@ const toggleMenu = () => {
   display: flex;
   justify-content:center;
   align-items: center;
-  width: 100% ;
+  width: 90% ;
   gap :2rem;
   margin-left: -50px;
 

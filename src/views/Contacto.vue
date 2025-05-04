@@ -29,8 +29,11 @@
  {
   margin-top: 350px;
   background-image: url('/background-contacto1.jpg'); 
-  height: 1000px;
   margin-top: 20px;
+  min-width: 100hv;
+  min-height: 260vh;
+  padding: 1rem;
+  
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(5px);
@@ -105,17 +108,6 @@
   transform: scale(1.03);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-}
-@media (max-width: 768px) {
-  .postal-card {
-    flex-direction: column;
-    aspect-ratio: auto;
-    padding: 1rem;
-  }
-
-  .postal-left, .postal-right {
-    width: 100%;
-  }
 }
 
 </style>

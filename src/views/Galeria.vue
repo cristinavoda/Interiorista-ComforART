@@ -1,10 +1,7 @@
 <template>
    <div class="galeria-bg">
   <div class="galeria-container">
-    <div class="galeria-bg">
-     
-    </div>
-    <!-- Botones -->
+   
     <div class="galeria-botones">
       <button
         v-for="(foto, index) in fotos"
@@ -16,8 +13,7 @@
       </button>
     </div>
 
-    <!-- Imagen -->
-    <div class="galeria-imagen">
+     <div class="galeria-imagen">
       <img
         :src="fotos[imagenActual].src"
         :alt="fotos[imagenActual].titulo"
@@ -58,35 +54,39 @@ export default {
 
 <style scoped> 
 .galeria-bg {
-  background-image: url('/background-galeria.png'); /* asegúrate de que esté en /public/img */
+  background-image: url('/background-galeria.png');
   background-size: cover;
   background-position: center;
-  backdrop-filter: blur(5px); /* efecto tipo cristal */
+  backdrop-filter: blur(5px); 
+  min-width: 100hv;
   min-height: 100vh;
-  padding: 2rem;
+  padding: 1rem;
   
 }
+
 .galeria-container {
   display: flex;
   flex-direction: row;
   width: 100%;
   min-height: 100vh;
-  padding-top: 10px; /* para que no se solape con navbar fijo */
+  padding-top: 10px; 
+  padding-left: 20px;
   box-sizing: border-box;
 }
+  
 
-.galeria-botones {
-  margin-top: 210px;
-  margin-left: -140px;
-  width: 30%;
-  padding: 2rem;
-  display: flex;
+  .galeria-botones {
+    display: flex;
+    margin-top: 80px;
   flex-direction: column;
-  gap: 1rem;
-  background-color:transparent;
-  border-radius: 12px;
-  padding-top: 1px;
-}
+    margin: 1rem 0rem  o ;
+    width: 90%;
+    padding: 1rem;
+    gap: 1rem;
+  }
+   
+ 
+
 
 .boton {
   padding: 10px 15px;
@@ -126,16 +126,12 @@ export default {
   border-radius: 15px;
   object-fit: cover;
 }
-@media (max-width: 768px) {
-  .postal-card {
+ @media (max-width: 768px) {
+  .galeria-container {
     flex-direction: column;
-    aspect-ratio: auto;
+    align-items: center;
     padding: 1rem;
   }
 
-  .postal-left, .postal-right {
-    width: 100%;
-  }
-}
-
+ }
 </style>

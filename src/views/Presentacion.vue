@@ -29,7 +29,7 @@
   backdrop-filter: blur(5px); 
   min-height: 100vh;
   padding: 2rem;
-  color: white;
+ 
 }
 .presentacion {
   display: block;
@@ -43,7 +43,7 @@
   border-radius: 16px;
   backdrop-filter: blur(8px);
   flex-wrap: wrap;
-  color: #ccc;
+  
 }
 
 .foto-perfil {

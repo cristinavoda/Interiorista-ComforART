@@ -1,5 +1,6 @@
 <template>
    <div class="galeria-bg">
+
   <div class="galeria-container">
    
     <div class="galeria-botones">
@@ -52,13 +53,13 @@ export default {
 };
 </script>
 
-<style scoped> 
+<style >
 .galeria-bg {
   background-image: url('/background-galeria.png');
   background-size: cover;
   background-position: center;
   backdrop-filter: blur(5px); 
-  min-width: 100hv;
+  width: 100hw;
   min-height: 100vh;
   padding: 1rem;
   

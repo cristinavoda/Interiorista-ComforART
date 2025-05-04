@@ -1,96 +1,152 @@
 <template>
-  <nav class="navbar">
-    <div class="navbar-inner">
-     
-      
-        <router-link to="/" class="nav-link">Inicio</router-link>
-        <router-link to="/presentacion" class="nav-link">Presentación</router-link>
-        <router-link to="/proyectos" class="nav-link">Proyectos</router-link>
-        <router-link to="/galeria" class="nav-link">Galería</router-link>
-        <router-link to="/contacto" class="nav-link">Contacto</router-link>
-        <button class="menu-toggle" @click="toggleMenu">≡</button>
-      </div>
-     
-      
-  
-  </nav>
+  <div class="hamburger-icon" :class="{'open': navbarOpen}" @click="toggleNavbar">
+  <div class="line"></div>
+  <div class="line"></div>
+  <div class="line"></div><!-- Botón de hamburguesa para móviles -->
+    <button @click="toggleSidebar" class="hamburger-btn">
+      <span class="hamburger-icon">≣</span>
+    </button>
+</div><div>
+    <!-- Botón de hamburguesa para móviles -->
+    <button @click="toggleSidebar" class="hamburger-btn">
+      <span class="hamburger-icon">≣</span>
+    </button>
+
+    <!-- Sidebar -->
+    <div :class="['sidebar', { 'sidebar-open': isSidebarOpen }]">
+      <ul>
+        <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/galeria">Galeria</router-link></li>
+        <li><router-link to="/proyectos">Proyectos</router-link></li>
+        <li><router-link to="/contacto">Contacto</router-link></li>
+        <li><router-link to="/presentacion">Presentacion</router-link></li>
+      </ul>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="content">
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
-
-const isMenuVisible = ref(false);
-
-const toggleMenu = () => {
-  isMenuVisible.value = !isMenuVisible.value;
+<script>
+export default {
+  data() {
+    return {
+      isSidebarOpen: false,
+    };
+  },
+  methods: {
+    toggleSidebar() {
+      this.isSidebarOpen = !this.isSidebarOpen;
+    },
+  },
 };
 </script>
 
 <style scoped>
-.navbar {
+
+
+.hamburger-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hamburger-icon {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #ffff;
+  transition: 0.3s;
+}
+
+.hamburger-btn:hover .hamburger-icon {
+  background-color: #146654; /* Color cuando se pasa el ratón */
+}
+.hamburger-icon.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* Estilos para el sidebar */
+.sidebar {
   position: fixed;
   top: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  background: rgba(235, 231, 231, 0.993);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 10px 10px 30px rgba(10, 102, 67, 0.1);
-  font-family: 'Outfit', sans-serif;
+  left: -250px; /* Lo mantenemos fuera de la pantalla inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: transparent;
+  color: white;
+  transition: 0.3s;
+  padding: 20px;
   z-index: 50;
 }
 
-.navbar-inner {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.sidebar-open {
+  left: 0; /* Cuando se abre, el sidebar aparece */
 }
 
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
 
-.nav-link {
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
   text-decoration: none;
-  color: rgba(16, 47, 48, 0.986);
-  body {
-  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  transition: color 0.3s;
 }
 
-  font-size: x-large;
-  transition: color 0.3s ease;
-  padding: 10px 0px 10px;
-  gap: 2rem;
-  
+.sidebar ul li a:hover {
+  color: #327c6d;
 }
 
-.nav-link:hover {
-  color: #22769c;
+/* Contenido principal */
+.content {
+  margin-left: 0;
+  padding: 20px;
+  transition: margin-left 0.3s;
 }
 
-.menu-toggle {
-  display: none;
-  background-color: transparent;
-  border: none;
-  font-size: 2rem;
-  color: rgba(4, 46, 48, 0.986);
+.sidebar-open ~ .content {
+  margin-left: 250px; /* Deja espacio para el sidebar */
 }
 
-/* Estilos para el menú en dispositivos móviles */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .menu-toggle {
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .hamburger-btn {
     display: block;
   }
 
-  .menu-visible {
-    display: flex;
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .sidebar-open ~ .content {
+    margin-left: 0;
   }
 }
 </style>
-

@@ -30,7 +30,7 @@
   margin-top: 350px;
   background-image: url('/background-contacto1.jpg'); 
   margin-top: 20px;
-  min-width: 100hv;
+  width: 100hw;
   min-height: 260vh;
   padding: 1rem;
   
@@ -41,14 +41,11 @@
 }
 
 .contact-container {
-  display: grid;
-  margin-top: 210px;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(6, auto);
+  margin-top: 50px;
   gap: 1rem;
-  width: 3100px;
+   max-width: 600px;
   margin: 1 auto;
-  background-color: rgba(255, 255, 255, 0.062); /* efecto cristal o papel */
+  background-color: rgba(255, 255, 255, 0.062); 
   padding: 2rem;
   border-radius: 12px;
   backdrop-filter: blur(19px);
@@ -90,15 +87,14 @@
 .contact-form button {
   grid-row: 6;
   justify-self: end;
-  padding: 0.7rem 1.5rem;
-  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.7rem 1rem;
+  background-color: rgba(243, 237, 237, 0.918);
   border: none;
-  
-  color: #000;
-  font-weight: bold;border: 1px solid rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 8px;
   color: #000;
-  font-weight: bold;
+  
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
@@ -108,6 +104,12 @@
   transform: scale(1.03);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%;
+    padding: 0,5rem;
+  }
 }
 
 </style>

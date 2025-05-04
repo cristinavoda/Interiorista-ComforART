@@ -12,10 +12,10 @@
 </div>
 
     <div class="min-h-screen flex flex-col justify-center items-center bg-white">
-      <h1 ref="title" class="text-4xl md:text-6xl font-bold mt-4 text-gray-900 -m-t-30" >
+      <h1 ref="glass-title" class="text-4xl md:text-6xl font-bold mt-4 text-white-900 -m-t-30" >
         Espacios de Diseño
       </h1>
-      <p ref="subtitle" class="text-lg md:text-3xl text-gray-600 max-w-xl text-center -m-t-10">
+      <p ref="subtitle" class="text-lg md:text-3xl text-white-600 max-w-xl text-center -m-t-10">
         Interiorismo elegante y minimalista. Espacios con alma.
       </p>
     </div>

@@ -1,26 +1,16 @@
-/* Aquí puedes empezar a escribir tu CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
- 
-  h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: rgba(23, 33, 34, 0.986);
-  }
-  
-  .navbar {
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(25, 170, 139, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 50;
-    padding: 20px 40px;
-  }
-  
-  /* Aquí se seguirían los estilos que definimos anteriormente para el navbar */
-  
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(23, 33, 34, 0.986);
+}

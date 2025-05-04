@@ -31,21 +31,11 @@
  <div class="hover-group absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center text-center text-white px-4"
 >
 
-  <h2 class="fade-on-hover">Cristina Voda</h2>
-  <p class="fade-on-hover text-lg md:text-3xl font-bold mb-6 max-w-xl text-left fade-on-hover">
-   ConforART Diseño de interiores elegante, moderno y con alma.
-  </p>
   <section class="bg-green-100 py-16 text-left mt-20">
   
-  <router-link
-    to="/contacto"
-    class=" fade-on-hover inline-block bg-green-700 text-white px-6 py-3 rounded-full hover:bg-green-800 transition"
-  >
-    Contácto
-  </router-link>
 </section>
 
-  <button class="glass-button">CONTÁCTO</button>
+  
 
 </div>
 

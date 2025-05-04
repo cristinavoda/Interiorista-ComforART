@@ -5,18 +5,9 @@
     <router-view />
   </transition>
   
-  <div class="Navbar-wrapper" @click.self="closeNavbar">
-    
-  
-    <div class="toggle" @click="handleClick" >
-      &#9776;
-    </div>
-  </div>
-  
-  
-  
+  <main class="video-wrapper">
   <div id="background-container">
-    <!-- Video de fondo -->
+    
     <video
       autoplay
       loop
@@ -27,25 +18,9 @@
       <source src="/background.mp4" type="video/mp4" />
     </video>
  </div>
-
- <div class="hover-group absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center text-center text-white px-4"
->
-
-  <section class="bg-green-100 py-16 text-left mt-20">
-  
-</section>
-
-  
-
+</main>
 </div>
-
-    
-    
-  </div>
-     
-      
-    
- </template>
+</template>
 
 <script setup>
 import { ref, onMounted } from 'vue'
@@ -75,11 +50,14 @@ onMounted(() => {
 </script>
 
 <style> 
-
-.h1 {
-  margin-top: -80px;
-  color: rgb(5, 78, 78);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 10;
 }
 .glass-title {
   font-size: 4rem;
@@ -92,38 +70,33 @@ onMounted(() => {
   text-shadow: 0 5px 10px rgba(25, 156, 128, 0.5),
                0 0 20px rgba(255, 255, 255, 0.3);
 }
-/* Reset general (como lo hace Tailwind) */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Borde de cristal */
+
 .glass-button {
   padding: 12px 30px;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.1);  /* Fondo semitransparente */
-  border: 1px solid rgba(255, 255, 255, 0.3);  /* Borde suave */
-  backdrop-filter: blur(8px);  /* Efecto cristal difuso */
+  background: rgba(255, 255, 255, 0.1);  
+  border: 1px solid rgba(255, 255, 255, 0.3);  
+  backdrop-filter: blur(8px);  
   color: white;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
-/* Efecto hover */
+
 .glass-button:hover {
-  background: rgba(255, 255, 255, 0.2);  /* Fondo más transparente */
-  transform: scale(1.05);  /* Escalado leve en hover */
+  background: rgba(255, 255, 255, 0.2);  
+  transform: scale(1.05);  
 }
 
 
-.h2 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: xx-large;
-top:0cap
-}
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.5s ease;
 }
@@ -131,63 +104,40 @@ top:0cap
 .fade-enter, .fade-leave-to {
   opacity: 0;
 }
-.hover-group:hover .fade-on-hover {
-  opacity: 0;
-  transform: scale(0.95);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.fade-on-hover {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.hover-group {
-  position: absolute;
-  bottom: 2rem; /* o el valor que necesites */
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  z-index: 10;
-}
-
 #bg-video {
-  position: fixed;
-  top:5%;
-  bottom:5% ;
-  left: 110px;
-  width: 100%;
-  height: 90%;
-  object-fit:var();
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
   z-index: -1;
 }
 
-/* TOGGLE BAR */
-.toggle {
-  position: fixed;
-  top: 20px;
-  right: 40px;
-  font-size: 62px;
-  font-weight: bolder;
-  color: white;
-  cursor: pointer;
-  z-index: 2;
-}
-.button {
-  background: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Borde similar al cristal */
-  border-radius: 8px; /* Bordes redondeados */
-  padding: 12px 24px;
-  color: white;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
+/* Contenido sobre el video */
+.video-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 5rem;
 }
 
-.button:hover {
-  background: rgba(255, 255, 255, 0.4); /* Aumentar la opacidad en hover */
-  transform: scale(1.1); /* Aumentar el tamaño del botón al pasar el ratón */
+/* Botón elegante */
+.cta-button {
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
+
+
 @media (max-width: 768px) {
   .postal-card {
     flex-direction: column;

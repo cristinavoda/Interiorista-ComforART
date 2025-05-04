@@ -61,10 +61,10 @@ export default {
   background-image: url('/background-galeria.png'); /* asegúrate de que esté en /public/img */
   background-size: cover;
   background-position: center;
-  backdrop-filter: blur(5px); /* efecto tipo cristal */
-  min-height: 100vh;
+  height: fit-content;
+  width: 100%;
   padding: 2rem;
-  color: white;
+  
 }
 .galeria-container {
   display: flex;

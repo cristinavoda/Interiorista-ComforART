@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar">
-    <div class="navbar-container">
+    <div class="navbar-inner">
      
       
         <router-link to="/" class="nav-link">Inicio</router-link>
@@ -28,35 +28,36 @@ const toggleMenu = () => {
 
 <style scoped>
 .navbar {
-  background-color: white;
-  box-shadow: 6px 12px 6px rgba(102, 105, 105, 0.1);
-  position:absolute;
+  position: fixed;
   top: 0;
-  margin-right:  -80px;
-  width:90%;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(235, 231, 231, 0.993);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 10px 10px 30px rgba(10, 102, 67, 0.1);
+  font-family: 'Outfit', sans-serif;
   z-index: 50;
-  padding: 20px 30px;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: xx-large;
-  
 }
 
-.navbar-container {
+.navbar-inner {
+  width: 100%;
+  max-width: 1200px;
   display: flex;
-  justify-content:center;
+  justify-content: space-between;
   align-items: center;
-  width: 90% ;
-  gap :2rem;
-  margin-left: -50px;
-
 }
-
 
 
 .nav-link {
   text-decoration: none;
   color: rgba(16, 47, 48, 0.986);
-  
+  body {
+  font-family: 'Outfit', sans-serif;
+}
+
+  font-size: x-large;
   transition: color 0.3s ease;
   padding: 10px 0px 10px;
   gap: 2rem;

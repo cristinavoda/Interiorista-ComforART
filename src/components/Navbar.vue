@@ -1,18 +1,11 @@
 <template>
-  <div class="hamburger-icon" :class="{'open': navbarOpen}" @click="toggleNavbar">
-  <div class="line"></div>
-  <div class="line"></div>
-  <div class="line"></div><!-- Botón de hamburguesa para móviles -->
-    <button @click="toggleSidebar" class="hamburger-btn">
-      <span class="hamburger-icon">≣</span>
-    </button>
-</div><div>
-    <!-- Botón de hamburguesa para móviles -->
-    <button @click="toggleSidebar" class="hamburger-btn">
+  <div ref="sidebarContainer">
+    
+     <button @click="toggleSidebar" class="hamburger-btn">
       <span class="hamburger-icon">≣</span>
     </button>
 
-    <!-- Sidebar -->
+   
     <div :class="['sidebar', { 'sidebar-open': isSidebarOpen }]">
       <ul>
         <li><router-link to="/">Home</router-link></li>
@@ -22,12 +15,8 @@
         <li><router-link to="/presentacion">Presentacion</router-link></li>
       </ul>
     </div>
-
-    <!-- Contenido principal -->
-    <div class="content">
-      <router-view></router-view>
     </div>
-  </div>
+
 </template>
 
 <script>
@@ -41,6 +30,12 @@ export default {
     toggleSidebar() {
       this.isSidebarOpen = !this.isSidebarOpen;
     },
+    handleClickOutside(event) {
+      const sidebar = this.$refs.sidebarContainer;
+      if (sidebar && !sidebar.contains(event.target)) {
+        this.isSidebarOpen = false;
+      }
+    }
   },
 };
 </script>
@@ -60,14 +55,17 @@ export default {
 
 .hamburger-icon {
   display: block;
-  width: 30px;
-  height: 3px;
-  background-color: #ffff;
+  margin-top: 3px;
+  size: 80px;
+  width: 90px;
+  height: 30px;
+  background: linear-gradient(to bottom, #16141b, #e5eceb);
+ 
   transition: 0.3s;
 }
 
 .hamburger-btn:hover .hamburger-icon {
-  background-color: #146654; /* Color cuando se pasa el ratón */
+  background-color: #146654; 
 }
 .hamburger-icon.open .line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
@@ -82,22 +80,23 @@ export default {
 }
 
 
-/* Estilos para el sidebar */
+
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* Lo mantenemos fuera de la pantalla inicialmente */
+  left: -250px; 
   width: 250px;
   height: 100%;
-  background-color: transparent;
+  background-color: rgb(156, 147, 147);
+  height:fit-content;
   color: white;
   transition: 0.3s;
-  padding: 20px;
+  padding: 50px;
   z-index: 50;
 }
 
 .sidebar-open {
-  left: 0; /* Cuando se abre, el sidebar aparece */
+  left: 0; 
 }
 
 .sidebar ul {
@@ -120,7 +119,7 @@ export default {
   color: #327c6d;
 }
 
-/* Contenido principal */
+
 .content {
   margin-left: 0;
   padding: 20px;
@@ -128,10 +127,10 @@ export default {
 }
 
 .sidebar-open ~ .content {
-  margin-left: 250px; /* Deja espacio para el sidebar */
+  margin-left: 250px; 
 }
 
-/* Media Query para pantallas pequeñas */
+
 @media screen and (max-width: 768px) {
   .hamburger-btn {
     display: block;

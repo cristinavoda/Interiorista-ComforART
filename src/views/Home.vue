@@ -6,7 +6,7 @@
     </div>
   </div>
   <div class="welcome-container">
-  <div class="hover-area"> <!-- Esta puede ser una imagen o cualquier bloque -->
+  <div class="hover-area"> 
     <h1 class="glass-title">BIENVENIDO </h1>
   </div>
 </div>
@@ -52,7 +52,7 @@
 .home-wrapper {
   position: relative;
   z-index: 2;
-  margin-top: -220px; /* ajusta según la altura del navbar */
+  margin-top: -220px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,7 +60,7 @@
 }
 
 .glass-box {
-  background: rgba(255, 255, 255, 0.1); /* gris claro translúcido */
+  background: rgba(255, 255, 255, 0.1); 
   backdrop-filter: blur(10px);
   border-radius: 1rem;
   margin-top: 90px;

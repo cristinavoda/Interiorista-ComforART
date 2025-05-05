@@ -84,8 +84,8 @@ onMounted(() => {
 
 
 .glass-button:hover {
-  background: rgba(255, 255, 255, 0.2);  /* Fondo más transparente */
-  transform: scale(1.05);  /* Escalado leve en hover */
+  background: rgba(255, 255, 255, 0.2);  
+  transform: scale(1.05);  
 }
 
 #background-container {
@@ -95,7 +95,7 @@ onMounted(() => {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: -1; /* para que quede en el fondo */
+  z-index: -1; 
 }
 
 
@@ -103,9 +103,9 @@ onMounted(() => {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  object-position: center center; /* puedes usar top center, etc. si hace falta */
+  object-position: center center; 
 }
-/* TOGGLE BAR */
+
 .toggle {
   position: fixed;
   top: 20px;
@@ -117,9 +117,9 @@ onMounted(() => {
   z-index: 2;
 }
 .button {
-  background: rgba(255, 255, 255, 0.2); /* Fondo translúcido */
-  border: 2px solid rgba(255, 255, 255, 0.5); /* Borde similar al cristal */
-  border-radius: 8px; /* Bordes redondeados */
+  background: rgba(255, 255, 255, 0.2); 
+  border: 2px solid rgba(255, 255, 255, 0.5); 
+  border-radius: 8px; 
   padding: 12px 24px;
   color: white;
   font-size: 1rem;
@@ -130,8 +130,8 @@ onMounted(() => {
 }
 
 .button:hover {
-  background: rgba(255, 255, 255, 0.4); /* Aumentar la opacidad en hover */
-  transform: scale(1.1); /* Aumentar el tamaño del botón al pasar el ratón */
+  background: rgba(255, 255, 255, 0.4); 
+  transform: scale(1.1);
 }
 
 

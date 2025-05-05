@@ -19,7 +19,7 @@
       </div>
       <div class="card-back">
         <h3>Oficina</h3>
-        <p>Descripción breve y atractiva.</p>
+        <p>Una oficina con una iluminacion versatil ,con con zona de trabajo ,y una zona informal ,almacenamiento a medida </p>
       </div>
     </div>
   </div>
@@ -29,8 +29,11 @@
         <img src="/proyecto3.jpg" alt="Proyecto 3" />
       </div>
       <div class="card-back">
-        <h3>Nombre del Proyecto</h3>
-        <p>Descripción breve y atractiva.</p>
+        <h3>Loft en Barcelona</h3>
+        <p>Un proyecto de interiorismo que transforma un espacio tipo loft en un refugio sofisticado y varonil, pensado para aprovechar al máximo las vistas urbanas.
+La paleta de colores se centra en marrones oscuros, grises intensos y negros mates, creando una atmósfera elegante y sobria. La combinación de metal negro y madera oscura texturizada aporta carácter industrial y calidez al mismo tiempo.
+
+Cada elemento ha sido cuidadosamente elegido para resaltar la arquitectura del lugar: techos altos, ventanales amplios y una distribución abierta que invita a disfrutar tanto del interior como del entorno exterior. El mobiliario de líneas rectas y materiales nobles refuerza la sensación de orden, fuerza y funcionalidad.</p>
       </div>
     </div>
   </div>
@@ -40,22 +43,25 @@
         <img src="/proyecto4.jpg" alt="Proyecto 4" />
       </div>
       <div class="card-back">
-        <h3>Nombre del Proyecto</h3>
-        <p>Descripción breve y atractiva.</p>
+        <h3>Apartamento</h3>
+        <p>Un proyecto centrado en la luz natural y la sensación de amplitud, ideal para espacios pequeños o con limitaciones de iluminación.
+La elección de mobiliario blanco y paredes en verde claro potencia la claridad del ambiente y genera una atmósfera serena y fresca.
+
+El diseño prioriza la funcionalidad con una distribución minimalista, sin recargar el espacio. Cada mueble tiene un propósito y un lugar, permitiendo la fluidez visual y el confort diario. El resultado es un apartamento que respira armonía, equilibrio y bienestar.</p>
       </div>
     </div>
   </div>
-  <!-- Repite para las otras 3 cards -->
+  
 </div>
 </div>
 </template>
 
 <style>
 .proyectos-bg {
-  background-image: url('/background-proyectos.jpg'); /* asegúrate de que esté en /public/img */
+  background-image: url('/background-proyectos.jpg'); 
   background-size: cover;
   background-position: center;
-  backdrop-filter: blur(5px); /* efecto tipo cristal */
+  backdrop-filter: blur(5px); 
   min-height: 100vh;
   padding: 2rem;
   color: white;

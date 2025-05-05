@@ -3,7 +3,7 @@
 
     <div class="contact-container">
 
-      <!-- Parte izquierda: Teléfono, dirección, etc. -->
+      
       <div class="contact-info">
         <h2>Contacto</h2>
         <p><strong>Teléfono:</strong> +34 634608218</p>
@@ -11,7 +11,7 @@
         <p><strong>Dirección:</strong> C/ Estilo Nº7, Lleida</p>
       </div>
 
-      <!-- Parte derecha: Formulario tipo postal -->
+      
       <div class="contact-form">
         <input type="text" placeholder="Nombre" />
         <input type="email" placeholder="Email" />
@@ -66,7 +66,7 @@
   display: grid;
   grid-template-rows: repeat(6, auto);
   gap: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.062); /* efecto cristal o papel */
+  background-color: rgba(255, 255, 255, 0.062); 
   padding: 2rem;
   border-radius: 12px;
   backdrop-filter: blur(19px);

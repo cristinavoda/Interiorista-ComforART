@@ -54,14 +54,14 @@ export default {
 </script>
 
 <style >
-.galeria-bg {
-  background-image: url('/background-galeria.png');
+.galeria-bg { background-image: url('/background-galeria.png'); 
   background-size: cover;
+  
   background-position: center;
   backdrop-filter: blur(5px); 
-  width: 100hw;
-  min-height: 100vh;
-  padding: 1rem;
+  padding: 2rem;
+  color: white;
+  
   
 }
 

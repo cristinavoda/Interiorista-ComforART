@@ -30,7 +30,7 @@
       </div>
       <div class="card-back">
         <h3>Loft en Barcelona</h3>
-        <p>Un proyecto de interiorismo que transforma un espacio tipo loft en un refugio sofisticado y varonil, pensado para aprovechar al máximo las vistas urbanas.
+        <p>
 La paleta de colores se centra en marrones oscuros, grises intensos y negros mates, creando una atmósfera elegante y sobria. La combinación de metal negro y madera oscura texturizada aporta carácter industrial y calidez al mismo tiempo.
  </p>
       </div>
@@ -43,10 +43,9 @@ La paleta de colores se centra en marrones oscuros, grises intensos y negros mat
       </div>
       <div class="card-back">
         <h3>Apartamento</h3>
-        <p>Un proyecto centrado en la luz natural y la sensación de amplitud, ideal para espacios pequeños o con limitaciones de iluminación.
+        <p>
 La elección de mobiliario blanco y paredes en verde claro potencia la claridad del ambiente y genera una atmósfera serena y fresca.
-
-El diseño prioriza la funcionalidad con una distribución minimalista, sin recargar el espacio.</p>
+El diseño prioriza la funcionalidad con una distribución minimalista.</p>
       </div>
     </div>
   </div>

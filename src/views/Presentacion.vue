@@ -51,7 +51,7 @@
 .presentacion {
   display: block;
   height: 1300px;
-  width: 1400px;
+  width: 400px;
   align-items:center;
   justify-content: center;
   gap: 4rem;

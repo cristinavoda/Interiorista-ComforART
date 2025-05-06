@@ -29,7 +29,7 @@
 
 <script>
 import { ref } from 'vue'
-const toggleSidebar = ref(false)
+
 export default {
   data() {
     return {

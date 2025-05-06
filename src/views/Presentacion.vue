@@ -39,7 +39,7 @@
     margin-top: 350px;
   background-image: url('/background-presentacion.jpg'); 
   margin-top: 20px;
-  width: 100hw;
+  min-width: 450vh;
   min-height: 260vh;
   padding: 1rem;
   

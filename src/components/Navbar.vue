@@ -1,31 +1,42 @@
 <template>
   <div ref="sidebarContainer">
-    
-     <button @click="toggleSidebar" class="hamburger-btn">
+    <button @click="toggleSidebar" class="hamburger-btn">
       <span class="hamburger-icon">≣</span>
     </button>
 
-   
-    <div :class="['sidebar', { 'sidebar-open': isSidebarOpen }]">
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/galeria">Galeria</router-link></li>
-        <li><router-link to="/proyectos">Proyectos</router-link></li>
-        <li><router-link to="/contacto">Contacto</router-link></li>
-        <li><router-link to="/presentacion">Presentacion</router-link></li>
-      </ul>
-    </div>
-    </div>
+    <div 
+      v-if="isSidebarOpen"
+      @click="toggleSidebar = false"
+      class="fixed inset-0 bg-black bg-opacity-30 z-40"
+    ></div>
 
+    <aside 
+      v-if="isSidebarOpen"
+      class="fixed left-0 top-0 h-full w-64 bg-white shadow-lg z-50 transition-transform duration-300"
+    >
+      <div class="sidebar sidebar-open">
+        <ul>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/galeria">Galeria</router-link></li>
+          <li><router-link to="/proyectos">Proyectos</router-link></li>
+          <li><router-link to="/contacto">Contacto</router-link></li>
+          <li><router-link to="/presentacion">Presentacion</router-link></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
 </template>
 
 <script>
+import { ref } from 'vue'
+const toggleSidebar = ref(false)
 export default {
   data() {
     return {
       isSidebarOpen: false,
     };
   },
+  
   methods: {
     toggleSidebar() {
       this.isSidebarOpen = !this.isSidebarOpen;
@@ -132,10 +143,22 @@ export default {
   transition: margin-left 0.3s;
 }
 
-.sidebar-open ~ .content {
-  margin-left: 250px; 
+.slide-enter-from {
+  transform: translateX(-100%);
 }
-
+.slide-enter-to {
+  transform: translateX(0);
+}
+.slide-leave-from {
+  transform: translateX(0);
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.3s ease-in-out;
+}
 
 @media screen and (max-width: 768px) {
   .hamburger-btn {
@@ -153,5 +176,10 @@ export default {
   .sidebar-open ~ .content {
     margin-left: 0;
   }
+    .sidebar-closed ~ .content {
+    background-color: transparent;
+  }
 }
 </style>
+
+

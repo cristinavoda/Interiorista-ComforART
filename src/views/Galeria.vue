@@ -56,7 +56,6 @@ export default {
 <style >
 .galeria-bg { background-image: url('/background-galeria.png'); 
  background-size: cover;
- 
  background-position: center;
  backdrop-filter: blur(5px); 
  padding: 2rem;
@@ -69,7 +68,7 @@ export default {
  display: flex;
  flex-direction: row;
  width: 100%;
- min-height: 100vh;
+ gap: 2rem;
  padding-top: 10px; 
  padding-left: 0px;
  box-sizing: border-box;
@@ -79,7 +78,7 @@ export default {
  .galeria-botones {
    display: flex;
    margin-top: 80px;
- flex-direction: column;
+   flex-direction: column;
    margin: 1rem   o ;
    width: 20%;
    padding: 1rem;
@@ -94,7 +93,6 @@ export default {
  border: 2px solid #caecda;
  border-radius: 8px;
  background-color: rgba(211, 216, 215, 0.719);
-
  font-weight: bold;
  cursor: pointer;
  transition: all 0.3s ease;
@@ -115,7 +113,6 @@ export default {
 .galeria-imagen {
  margin-top: 60px;
  width: 60%;
- max-width: 800px;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -123,7 +120,7 @@ export default {
 }
 
 .galeria-imagen img {
- width: 100%;
+ width: 50%;
  height: 100%;
  border-radius: 15px;
  object-fit: cover;
@@ -134,6 +131,15 @@ export default {
    align-items: center;
    padding: 1rem;
  }
+ .galeria-botones,
+  .galeria-imagen {
+    width: 90%; 
+    padding: 0.5rem;
+  }
 
+  .galeria-imagen img {
+    height: auto;
+    max-width: 100%;
+  }
 }
 </style>

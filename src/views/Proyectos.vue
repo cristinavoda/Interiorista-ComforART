@@ -31,7 +31,7 @@
       <div class="card-back">
         <h3>Loft en Barcelona</h3>
         <p>
-La paleta de colores se centra en marrones oscuros, grises intensos y negros mates, creando una atmósfera elegante y sobria. La combinación de metal negro y madera oscura texturizada aporta carácter industrial y calidez al mismo tiempo.
+La paleta de colores se centra en marrones oscuros, grises intensos y negros mates, creando una atmósfera elegante y sobria. La combinación de metal negro y madera oscura texturizada aporta carácter industrial y calidez .
  </p>
       </div>
     </div>

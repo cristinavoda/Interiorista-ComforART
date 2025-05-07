@@ -3,7 +3,7 @@
 
  <div class="galeria-container">
   
-   <div class="galeria-botones">
+   <div class="galeria-botones w-1/4 p-6 space-y-4">
      <button
        v-for="(foto, index) in fotos"
        :key="index"
@@ -14,7 +14,7 @@
      </button>
    </div>
 
-    <div class="galeria-imagen">
+    <div class="galeria-imagen  w-1/2 flex items-center justify-center overflow-hidden relative">
      <img
        :src="fotos[imagenActual].src"
        :alt="fotos[imagenActual].titulo"
@@ -67,10 +67,9 @@ export default {
 .galeria-container {
  display: flex;
  flex-direction: row;
- width: 100%;
- gap: 2rem;
  padding-top: 10px; 
- padding-left: 0px;
+ margin-left: 10px;
+ padding-left: -300px;
  box-sizing: border-box;
 }
  
@@ -80,8 +79,8 @@ export default {
    margin-top: 80px;
    flex-direction: column;
    margin: 1rem   o ;
-   width: 20%;
-   padding: 1rem;
+   width: fit fit-content;
+   padding: 0rem;
    gap: 1rem;
  }
   
@@ -112,7 +111,7 @@ export default {
 
 .galeria-imagen {
  margin-top: 60px;
- width: 160%;
+ width: 50%;
  display: flex;
  align-items: center;
  justify-content: center;
@@ -120,26 +119,18 @@ export default {
 }
 
 .galeria-imagen img {
- width: 100%;
- height: 100%;
+
  border-radius: 15px;
  object-fit: cover;
 }
 @media (max-width: 768px) {
- .galeria-container {
-   flex-direction: column;
-   align-items: center;
-   padding: 1rem;
- }
- .galeria-botones,
-  .galeria-imagen {
-    width: 90%; 
-    padding: 0.5rem;
+  .galeria-botones {
+    align-items: center;
   }
 
-  .galeria-imagen img {
-    height: auto;
-    max-width: 100%;
+  .boton {
+    width: 100%;
+    text-align: center;
   }
 }
 </style>

@@ -66,7 +66,7 @@ export default {
 
 .galeria-container {
  display: flex;
- flex-direction: row;
+ 
  padding-top: 10px; 
  margin-left: 10px;
  padding-left: -300px;

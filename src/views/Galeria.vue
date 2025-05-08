@@ -20,7 +20,8 @@
        :alt="fotos[imagenActual].titulo"
      />
    </div>
- </div></div>
+ </div>
+</div>
 
 </template>
 
@@ -37,6 +38,11 @@ export default {
        { titulo: 'Bañera', src: '/galeria/bañera-vistas.jpg' },
        { titulo: 'Dormitorio', src: '/galeria/habitacion-matrimonio-verde.jpg' },
        { titulo: 'Modular', src: '/galeria/modular.jpg' },
+       { titulo: 'baño-simple', src: '/galeria/baño-simple.jpg' },
+       { titulo: 'butacas', src: '/galeria/butacas.jpg' },
+       { titulo: 'mueble-lavabo', src: '/galeria/mueble-lavabo.jpg' },
+       { titulo: 'oficina', src: '/galeria/oficina.jpg' },
+
      ],
    };
  },
@@ -66,24 +72,23 @@ export default {
 
 .galeria-container {
  display: flex;
- 
  padding-top: 10px; 
- margin-left: 10px;
- padding-left: -300px;
- box-sizing: border-box;
+ flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1200px;
+
+ 
 }
  
 
- .galeria-botones {
-   display: flex;
-   margin-top: 80px;
-   flex-direction: column;
-   margin: 1rem   o ;
-   width: fit fit-content;
-   padding: 0rem;
-   gap: 1rem;
- }
-  
+.galeria-botones {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 
 
 
@@ -109,28 +114,36 @@ export default {
  box-shadow: 10px 10px 10px rgba(52, 199, 177, 0.4);
 }
 
-.galeria-imagen {
- margin-top: 60px;
- width: 50%;
- display: flex;
- align-items: center;
- justify-content: center;
- padding: 2rem;
+.galeria-imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
 }
-
 .galeria-imagen img {
 
  border-radius: 15px;
  object-fit: cover;
 }
-@media (max-width: 768px) {
-  .galeria-botones {
+@media
+ (max-width: 768px) {
+  .galeria-container {
+    flex-direction: column;
     align-items: center;
   }
 
-  .boton {
+  .galeria-botones,
+  .galeria-imagen {
     width: 100%;
-    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .galeria-botones {
+    order: 1; /* Opcional: coloca botones arriba o abajo */
+  }
+
+  .galeria-imagen {
+    order: 2;
   }
 }
 </style>

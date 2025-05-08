@@ -14,7 +14,7 @@
      </button>
    </div>
 
-    <div class="galeria-imagen  w-1/2 flex items-center justify-center overflow-hidden relative">
+    <div class="galeria-imagen  w-1/3 flex items-center justify-center overflow-hidden relative">
      <img
        :src="fotos[imagenActual].src"
        :alt="fotos[imagenActual].titulo"
@@ -32,7 +32,7 @@ export default {
      imagenActual: 0,
      fotos: [
        { titulo: 'Escalera cristal', src: '/galeria/escalera-cristal.jpg' },
-       { titulo: 'Cocina moderna verde', src: '/galeria/cocina-moderna-verde.jpg' },
+       { titulo: 'Cocina verde', src: '/galeria/cocina-verde.jpg' },
        { titulo: 'Comedor', src: '/galeria/comedor-verde.jpg' },
        { titulo: 'Salón exterior', src: '/galeria/salon-exterior.jpg' },
        { titulo: 'Bañera', src: '/galeria/bañera-vistas.jpg' },
@@ -42,6 +42,7 @@ export default {
        { titulo: 'butacas', src: '/galeria/butacas.jpg' },
        { titulo: 'mueble-lavabo', src: '/galeria/mueble-lavabo.jpg' },
        { titulo: 'oficina', src: '/galeria/oficina.jpg' },
+       { titulo: 'cocina-1', src: '/galeria/cocina-1.jpg' },
 
      ],
    };
@@ -75,20 +76,18 @@ export default {
  padding-top: 10px; 
  flex-direction: row;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 800px;
 
  
 }
  
-
 .galeria-botones {
-  width: 20%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
   gap: 1rem;
+  width:fit-content;
   padding: 1rem;
 }
-
 
 
 
@@ -115,7 +114,7 @@ export default {
 }
 
 .galeria-imagen img {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
   border-radius: 15px;
   object-fit: cover;
@@ -125,16 +124,19 @@ export default {
  border-radius: 15px;
  object-fit: cover;
 }
+
+
 @media
  (max-width: 768px) {
   .galeria-container {
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    padding: 1px;
   }
 
   .galeria-botones,
   .galeria-imagen {
-    width: 100%;
+    width: 30%;
     padding: 0.5rem;
   }
 
@@ -144,6 +146,9 @@ export default {
 
   .galeria-imagen {
     order: 2;
+    width:60%;
+    border-radius: 15px
+
   }
 }
 </style>

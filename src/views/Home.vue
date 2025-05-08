@@ -106,16 +106,5 @@
   
   .hover-area:hover .glass-title {
     opacity: 1;
-  }@media (max-width: 768px) {
-  .postal-card {
-    flex-direction: column;
-    aspect-ratio: auto;
-    padding: 1rem;
   }
-
-  .postal-left, .postal-right {
-    width: 100%;
-  }
-}
-
   </style>

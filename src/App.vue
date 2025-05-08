@@ -17,8 +17,9 @@
     >
       <source src="/background.mp4" type="video/mp4" />
     </video>
+    
  </div>
-
+  
 </div>
 </template>
 
@@ -71,9 +72,9 @@ onMounted(() => {
 
 
 .glass-button {
-  padding: 12px 30px;
+  
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.1);  
+  background: rgba(141, 66, 66, 0.1);  
   border: 1px solid rgba(255, 255, 255, 0.3);  
   backdrop-filter: blur(8px);  
   color: white;

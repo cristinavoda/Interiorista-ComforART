@@ -17,6 +17,10 @@
       </h1>
       <p ref="subtitle" class="text-lg md:text-3xl text-white-600 max-w-xl text-center -m-t-10">
         Interiorismo elegante y minimalista. Espacios con alma.
+        <router-link to="/contacto" class="boton-contacto">
+  Contacto
+</router-link>
+
       </p>
     </div>
    
@@ -70,6 +74,7 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
   .welcome-container {
+    display: flex;
     position: fixed;
     top: -100px;
     height: 400px;
@@ -107,4 +112,24 @@
   .hover-area:hover .glass-title {
     opacity: 1;
   }
+  .boton-contacto {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: x-large;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.boton-contacto:hover {
+  background-color: #6d7271;
+  box-shadow: 0 4px 12px rgba(0, 128, 96, 0.3);
+}
+
   </style>

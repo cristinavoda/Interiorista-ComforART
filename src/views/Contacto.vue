@@ -11,8 +11,15 @@
         <p><strong>Dirección:</strong> C/ Estilo Nº7, Lleida</p>
       </div>
 
-      
       <div class="contact-form">
+        
+      <form
+      action="https://formspree.io/fmeogkdye/"
+      method="POST"
+      class="formulario-contacto"
+    >
+      
+    </form>
         <input type="text" placeholder="Nombre" />
         <input type="email" placeholder="Email" />
         <textarea rows="3" placeholder="Escribe tu mensaje aquí..."></textarea>
